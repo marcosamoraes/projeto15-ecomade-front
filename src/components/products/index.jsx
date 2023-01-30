@@ -21,11 +21,11 @@ export default function Products() {
   if (isError) {
     swal('Erro!', error.message ?? 'Ocorreu um erro inesperado, tente novamente mais tarde...', 'error');
   }
-
+  console.log(data);
   return (
     <ProductsContainer>
       {
-          data?.map((item) => (
+          data && data?.map((item) => (
             <div className="item" key={`${item._id}`}>
               <Link to={`/produtos/${item._id}`}>
                 <img src={item.image} alt={`Product ${item._id}`} />
