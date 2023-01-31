@@ -21,7 +21,7 @@ export default function Products() {
   if (isError) {
     swal('Erro!', error.message ?? 'Ocorreu um erro inesperado, tente novamente mais tarde...', 'error');
   }
-  console.log(data);
+
   return (
     <ProductsContainer>
       {
